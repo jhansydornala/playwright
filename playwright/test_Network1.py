@@ -11,6 +11,7 @@ def intercept_response(route):
     
 
 def test_Network1(page : Page):
+    #https://rahulshettyacademy.com/api/ecom/user/add-to-cart
     page.goto("https://rahulshettyacademy.com/client/")
     page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*", intercept_response)
     page.get_by_placeholder("email@example.com").fill("jhansy@yopmail.com")

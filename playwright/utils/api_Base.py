@@ -22,10 +22,14 @@ class APIUtils:
         response = api_request_context.post("api/ecom/order/create-order",
                                  data=ordersPayload,
                                  headers={"Authorization": token,
-                                          "Content-Type": "application.json"
+                                          "Content-Type": "application/json"
                                           })
         print(response.json())
+        print(response)
+        print(response.text)
         response_body = response.json()
         orderId = response_body["orders"][0]
+        print(response_body)
+        print(orderId)
         return orderId        
     
