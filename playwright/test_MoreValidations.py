@@ -14,7 +14,8 @@ def test_UIChecks(page:Page):
     time.sleep(5)
     
     #MouseHover
-    
+    page.locator("#mousehover").hover()
+    page.get_by_role("link",name="Top").click()
     
     
     
