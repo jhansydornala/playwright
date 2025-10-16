@@ -1,5 +1,9 @@
 from playwright.sync_api import expect
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 class OrderDetailsPage:
     
