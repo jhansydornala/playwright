@@ -31,6 +31,6 @@ def test_web_api(playwright: Playwright, browserInstance ,user_credentials):
     dashboard_Page = login_Page.login(username, password)
 #dashboardPage
     orderHistoryPage = dashboard_Page.selectOrdersNavLink()
-    orderHistoryPage = orderHistoryPage.selectOrder(orderId)
-    orderHistoryPage.verifyOrderMessage()
+    orderDetailsPage = orderHistoryPage.selectOrder(orderId)
+    orderDetailsPage.verifyOrderMessage()
    
